@@ -31,7 +31,7 @@ export function USER_POST() {
   };
 }
 
-export function PHOTO_POST() {
+export function PHOTO_POST(id: String) {
   return {
     url: API_URL + "/api/photo",
   };
