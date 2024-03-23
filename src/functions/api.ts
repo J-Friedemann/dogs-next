@@ -31,7 +31,7 @@ export function USER_POST() {
   };
 }
 
-export function PHOTO_POST(id: String) {
+export function PHOTO_POST() {
   return {
     url: API_URL + "/api/photo",
   };
@@ -75,15 +75,9 @@ export function COMMENT_POST(id, body) {
   };
 }
 
-export function PHOTO_DELETE(id) {
+export function PHOTO_DELETE(id: string) {
   return {
     url: `${API_URL}/api/photo/${id}`,
-    options: {
-      method: "DELETE",
-      headers: {
-        Authorization: "Bearer " + window.localStorage.getItem("token"),
-      },
-    },
   };
 }
 
